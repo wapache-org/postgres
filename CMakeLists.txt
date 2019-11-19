@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.8)
+project(postgres)
+set(CMAKE_CXX_STANDARD 11)
+include_directories(src/include)
+file(GLOB_RECURSE SOURCE_FILES "src" "*.c" "*.h")
+add_executable(postgres ${SOURCE_FILES})

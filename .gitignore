@@ -42,3 +42,13 @@ lib*.pc
 /Debug/
 /Release/
 /tmp_install/
+
+# make files
+
+/cmake-build-debug/
+/autom4te.cache/
+
+# IDE files
+.idea/
+
+
