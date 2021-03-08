@@ -1,0 +1,21 @@
+2021-01-31 22:38:33.112 CST [6871] LOG:  starting PostgreSQL 12.1 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0, 64-bit
+2021-01-31 22:38:33.113 CST [6871] LOG:  listening on IPv4 address "127.0.0.1", port 6543
+2021-01-31 22:38:33.125 CST [6871] LOG:  listening on Unix socket "/tmp/.s.PGSQL.6543"
+2021-01-31 22:38:33.169 CST [6872] LOG:  database system was shut down at 2021-01-31 22:38:19 CST
+2021-01-31 22:38:33.176 CST [6871] LOG:  database system is ready to accept connections
+2021-01-31 22:39:12.496 CST [6880] ERROR:  access method "rum" does not exist
+2021-01-31 22:39:12.496 CST [6880] STATEMENT:  CREATE INDEX idx_rum_test 
+	ON rum_test 
+	USING rum (tags rum_anyarray_addon_ops, created_at) 
+	WITH (attach = 'created_at', to = 'tags');
+2021-01-31 22:45:34.482 CST [6880] ERROR:  AddTo could should not have AddInfo
+2021-01-31 22:45:34.482 CST [6880] STATEMENT:  CREATE INDEX idx_rum_test2 
+	ON rum_test 
+	USING rum (tags rum_anyarray_ops, created_at) 
+	WITH (attach = 'created_at', to = 'tags');
+2021-02-03 09:23:12.802 CST [6880] ERROR:  could not open extension control file "/opt/pgsql-12/share/extension/pg_hint_plan.control": No such file or directory
+2021-02-03 09:23:12.802 CST [6880] STATEMENT:  create extension pg_hint_plan;
+2021-02-05 09:25:12.023 CST [6880] ERROR:  could not open extension control file "/opt/pgsql-12/share/extension/btree_gin.control": No such file or directory
+2021-02-05 09:25:12.023 CST [6880] STATEMENT:  CREATE EXTENSION btree_gin;
+2021-02-05 09:25:27.234 CST [6880] ERROR:  syntax error at or near "selecty" at character 1
+2021-02-05 09:25:27.234 CST [6880] STATEMENT:  selecty * from pg_available_extensions;
